@@ -274,7 +274,6 @@
                   Save Property
                 </button>
               </div>
-
               <div class="mt-4">
                 <button
                   type="button"
