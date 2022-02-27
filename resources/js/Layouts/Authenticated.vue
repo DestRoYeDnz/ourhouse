@@ -10,7 +10,10 @@
                         <h3 class="mb-4 text-3xl font-medium text-gray-700">
                             <slot name="header" />
                         </h3>
+                        <Alerts 
+                        :user=" this.$page.props.auth.user"
 
+                        />
                         <slot />
                     </div>
                 </main>
@@ -21,11 +24,12 @@
 <script>
 import Header from '@/Layouts/Header';
 import Navigation from '@/Layouts/Navigation';
-
+import Alerts from '@/Components/Alerts';
 export default {
     components: {
         Header,
-        Navigation
+        Navigation,
+        Alerts
     }
 }
 </script>

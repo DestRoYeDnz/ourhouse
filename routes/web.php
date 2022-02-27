@@ -37,7 +37,7 @@ Route::get('/', function () {
 Route::get('/custom_fields', function() {
     $properties = Property::first();
     $name = 'internet_available';
-    $properties->updateCustomFields($name, 'Fibre, VDSL, ADSL');
+    $properties->C($name, 'Fibre, VDSL, ADSL');
     echo  $properties->getCustomFields($name);
 }); 
 
@@ -63,7 +63,11 @@ Route::get('test', function () {
 }); */
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    $properties = Property::where('user_id', '=', auth()->id())->get();
+    return Inertia::render('Dashboard', [
+        'properties' => $properties
+
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
@@ -73,4 +77,6 @@ Route::middleware('auth')->group(function () {
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
     Route::get('property/custom-attributes',[CustomFieldsController::class, 'index'])->name('custom_fields.index');
+    Route::post('property/custom-attributes',[CustomFieldsController::class, 'store'])->name('custom_fields.store');
+
 });

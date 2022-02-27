@@ -43,7 +43,7 @@
                 bg-white
                 shadow-xl
                 rounded-2xl
-                border-2 border-indigo-300
+                border-2 border-ourhouse-300
               "
             >
               <DialogTitle
@@ -53,7 +53,8 @@
                 Add a new Property
               </DialogTitle>
               <div class="mt-6">
-                <div class="relative flex items-center mb-4">
+                <div class="relative flex flex-col  items-center mb-4">
+                  <p>https://www.trademe.co.nz/a/property/residential/sale/auckland/waitakere-city/massey/listing/3485774070</p>
                   <input
                     v-model="url"
                     class="
@@ -64,7 +65,7 @@
                       pl-2
                       bg-gray-50
                       focus:bg-white
-                      focus:ring-indigo-500
+                      focus:ring-ourhouse-500
                       focus:ring-2
                       focus:ring-offset-2
                       focus:ring-opacity-90
@@ -111,7 +112,7 @@
                                       class="
                                         text-left
                                         font-medium
-                                        text-indigo-500
+                                        text-ourhouse-500
                                       "
                                     >
                                       &nbsp;
@@ -159,13 +160,15 @@
                                       class="
                                         text-left
                                         font-medium
-                                        text-indigo-500
+                                        text-ourhouse-500
                                       "
                                     >
                                       &nbsp;
                                     </div>
                                   </td>
                                 </tr>
+
+
                                 <tr v-for="row in data" :key="row.id">
                                   <td class="p-2 whitespace-nowrap">
                                     <div class="text-left">
@@ -177,17 +180,19 @@
                                       class="
                                         text-left
                                         font-medium
-                                        text-indigo-500
+                                        text-ourhouse-500
                                       "
                                     >
                                       &nbsp;
                                     </div>
                                   </td>
                                 </tr>
+
+
                                 <tr v-for="row in data" :key="row.id">
                                   <td class="p-2 whitespace-nowrap">
                                     <div
-                                      class="flex items-center justify-start"
+                                      class="flex items-center justify-start w-full"
                                     >
                                       <div
                                         class="flex items-center justify-between"
@@ -196,7 +201,7 @@
                                           <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 512 512"
-                                            class="h-8 w-8 mr-4"
+                                            class="w-8 h-8 mr-4"
                                             xml:space="preserve"
                                           >
                                             <path
@@ -220,7 +225,7 @@
                                           <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 512 512"
-                                            class="h-8 w-8 mr-4"
+                                            class="w-8 h-8 mr-4"
                                             xml:space="preserve"
                                           >
                                             <path
@@ -240,7 +245,51 @@
                                       class="
                                         text-left
                                         font-medium
-                                        text-indigo-500
+                                        text-ourhouse-500
+                                      "
+                                    >
+                                      &nbsp;
+                                    </div>
+                                  </td>
+                                </tr>
+
+
+
+
+                                <tr>
+                                  <td class="p-2 whitespace-nowrap">
+                                    <div
+                                      class="flex items-center justify-start w-full"
+                                    >
+                                      <div
+                                        class="flex items-center justify-between"
+                                      >
+                                        <div>
+                                          <svg class='w-8 h-8 mr-4' viewBox="0 0 491.312 491.312" style="enable-background:new 0 0 491.312 491.312" xml:space="preserve"><path d="M0 0v491.312h491.312L0 0zm384 451.312v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24H96v24H64v-40H48v40H16v-40h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16V38.624l436.688 436.688H400v-24h-16z"/><path d="M80 411.312h128v-16H96V231.76l163.552 163.552H224v16h74.176L80 193.136z"/></svg>
+                                        </div>
+                                        <div>{{ data.house_area }}</div>
+                                      </div>
+                                      <div
+                                        class="
+                                          flex
+                                          items-center
+                                          justify-between
+                                        "
+                                      >
+                                      
+                                        <div class='ml-8'>
+                                          <svg class='w-8 h-8 mr-4' viewBox="0 0 491.312 491.312" style="enable-background:new 0 0 491.312 491.312" xml:space="preserve"><path d="M0 0v491.312h491.312L0 0zm384 451.312v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24H96v24H64v-40H48v40H16v-40h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16V38.624l436.688 436.688H400v-24h-16z"/><path d="M80 411.312h128v-16H96V231.76l163.552 163.552H224v16h74.176L80 193.136z"/></svg>
+                                        </div>
+                                        <div>{{ data.land_area }}</div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td class="p-2 whitespace-nowrap">
+                                    <div
+                                      class="
+                                        text-left
+                                        font-medium
+                                        text-ourhouse-500
                                       "
                                     >
                                       &nbsp;
@@ -265,9 +314,9 @@
                     font-bold
                     text-white
                     uppercase
-                    bg-indigo-500
+                    bg-ourhouse-500
                     rounded-md
-                    hover:bg-indigo-600
+                    hover:bg-ourhouse-600
                     font-heading
                   "
                 >
@@ -285,9 +334,9 @@
                     font-bold
                     text-white
                     uppercase
-                    bg-indigo-500
+                    bg-ourhouse-500
                     rounded-md
-                    hover:bg-indigo-600
+                    hover:bg-ourhouse-600
                     font-heading
                   "
                   @click="closeModal"
@@ -298,6 +347,12 @@
             </div>
           </TransitionChild>
         </div>
+                                        <div class="post-tags mb-4">
+                                    <strong>Tags : </strong>
+                                    <!-- @foreach($post->tags as $tag) -->
+                                        <span class="badge badge-info">1`2`121`2</span>
+                                    <!-- @endforeach -->
+                                </div>
       </div>
     </Dialog>
   </TransitionRoot>

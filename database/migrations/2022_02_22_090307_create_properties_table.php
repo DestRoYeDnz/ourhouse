@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use \Conner\Tagging\Taggable;
 
 return new class extends Migration
 {
@@ -24,6 +25,7 @@ return new class extends Migration
             $table->string('region');
             $table->string('price');
             $table->string('custom_fields')->nullable();
+            $table->text('tags');
             $table->unsignedBigInteger('bedrooms')->default(0);
             $table->unsignedBigInteger('bathrooms')->default(0);
             $table->unsignedBigInteger('house_area')->nullable();
