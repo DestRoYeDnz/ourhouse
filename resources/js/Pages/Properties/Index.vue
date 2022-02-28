@@ -17,8 +17,9 @@
         <div class="mt-7 overflow-x-auto min-h-128 ">
 
 
-        <div class="grid grid-cols-10 rounded-lg overflow-hidden">
+        <div class="grid grid-cols-12 rounded-lg overflow-hidden">
           <div class="p-4 font-semibold text-white col-span-2 bg-ourhouse-300 h-12">Title</div>
+          <div class="p-4 font-semibold text-white col-span-2 bg-ourhouse-300 h-12">Address</div>
           <div class="p-4 font-semibold text-white col-span-1 bg-ourhouse-300 h-12">Bedrooms</div>
           <div class="p-4 font-semibold text-white col-span-1 bg-ourhouse-300 h-12">Bathrooms</div>
           <div class="p-4 font-semibold text-white col-span-1 bg-ourhouse-300 h-12">House Area</div>
@@ -28,7 +29,7 @@
         </div>
 
         <div>
-          <div v-for="row in properties" :key="row.id" class="grid grid-cols-10  overflow-hidden">
+          <div v-for="row in properties" :key="row.id" class="grid grid-cols-12  overflow-hidden">
               <div class="font-semibold col-span-2  p-2 bg-white ">
                       <div class="flex items-center justify-start text-sm text-left  leading-none text-gray-600 ml-2">
                         <span class="font-bold text-lg tracking-wide">{{ row.title }}</span>
@@ -40,6 +41,7 @@
                           </a>
                       </div>
               </div>
+              <div class="p-4 font-semibold col-span-2 bg-white">{{ row.address }}</div>
               <div class="p-4 font-semibold col-span-1 bg-white">{{ row.bedrooms }}</div>
               <div class="p-4 font-semibold col-span-1 bg-white">{{ row.bathrooms }}</div>
               <div class="p-4 font-semibold col-span-1 bg-white">{{ row.house_area }} m<sup>2</sup></div>

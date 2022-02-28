@@ -26,7 +26,7 @@ class PropertyFactory extends Factory
             'unique_id' => sha1(time()),
             'source_url' => $this->faker->url(),
             'source' => 'trademe',
-            'title' => $this->faker->company(),
+            'title' => $this->faker->catchPhrase(),
             'address' => $this->faker->address(),
             'region' => array_rand($regions, 1),
             'price' => rand(120000, 500000),

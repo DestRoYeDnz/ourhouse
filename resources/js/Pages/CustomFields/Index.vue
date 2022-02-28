@@ -177,7 +177,7 @@
                 </div>
               </div>
             </div>
-
+            <div>These need to be updated for special-fields.</div>
             <div
               class="
                 grid
@@ -190,6 +190,7 @@
                 rounded
               "
             >
+            
               <div
                 @click="
                   custom_field = 'Internet Connection';
