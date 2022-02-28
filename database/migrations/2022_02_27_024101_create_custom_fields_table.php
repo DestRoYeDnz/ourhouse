@@ -18,6 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id')->constraint('user');
             $table->string('name');
             $table->string('slug');
+            $table->string('type');
             $table->string('value')->nullable();
             $table->string('color')->default('#2371BF');
             $table->timestamps();

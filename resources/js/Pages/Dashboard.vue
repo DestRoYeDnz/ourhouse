@@ -85,13 +85,6 @@ export default {
 
 
 <style>
-button{
-  cursor:pointer;
-  &:focus{
-    outline:none;
-  }
-}
-
 /* Animations */
 .fade-enter-active, .fade-leave-active {
   transition: opacity .5s;

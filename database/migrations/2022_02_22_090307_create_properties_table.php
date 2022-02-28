@@ -25,7 +25,7 @@ return new class extends Migration
             $table->string('region');
             $table->string('price');
             $table->string('custom_fields')->nullable();
-            $table->text('tags');
+            $table->text('tags')->nullable();
             $table->unsignedBigInteger('bedrooms')->default(0);
             $table->unsignedBigInteger('bathrooms')->default(0);
             $table->unsignedBigInteger('house_area')->nullable();

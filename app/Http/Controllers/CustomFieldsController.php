@@ -16,7 +16,6 @@ class CustomFieldsController extends Controller
 
         $custom_fields = CustomFields::where('user_id', '=', auth()->id())->get();
 
-
         return Inertia::render('CustomFields/Index', [
             'custom_fields' => $custom_fields,
         ]);
@@ -29,17 +28,18 @@ class CustomFieldsController extends Controller
             'slug' => 'required|unique:custom_fields',
         ]);
 
-        
-
         $properties = Property::where('user_id', '=', auth()->id())->get();
 
         foreach($properties as $row){
-            $row->updateCustomFields($request->input('slug'), null);
+            $row->updateCustomFields($request->input('slug'), '');
         }
 
         $cf = new CustomFields();
         $cf->name = $request->input('name');
         $cf->slug = $request->input('slug');
+        $cf->color = $request->input('color');
+        $cf->value = $request->input('value');
+        $cf->type = $request->input('type');
 
         $cf->user_id = auth()->id();
         $cf->save();
