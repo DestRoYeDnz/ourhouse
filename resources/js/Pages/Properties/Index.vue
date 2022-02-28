@@ -50,10 +50,7 @@
                       <div class="text-sm leading-none text-gray-600 ml-2">
                         <div>
                           <div class="leading-6 flex items-center flex-wrap " v-for="cf in custom_fields" :key="cf.id">
-                            <span class='relative w-1/2 font-bold text-xs rounded-md text-white px-2 py-1 mb-1 mr-2' :style="'background-color: ' + cf.color">{{cf.name}}: <span class='font-base text-xs'>VAL2</span></span>
-                            <div class='absolute top-0 right-0 bg-gray-500 w-32'>
-                                1234
-                            </div>
+                            <div class='relative w-1/2 font-bold text-xs rounded-md text-white px-2 py-1 mb-1 mr-2' :style="'background-color: ' + cf.color">{{cf.name}}: <span class='font-base text-xs'>VAL2</span></div>
                           </div>
                         </div>
                       </div>
