@@ -26,8 +26,10 @@ class PropertyFactory extends Factory
             'unique_id' => sha1(time()),
             'source_url' => $this->faker->url(),
             'source' => 'trademe',
-            'title' => $this->faker->catchPhrase(),
+            'title' => $this->faker->company(),
             'address' => $this->faker->address(),
+            'lat' => $this->faker->latitude(),
+            'long' => $this->faker->longitude(),
             'region' => array_rand($regions, 1),
             'price' => rand(120000, 500000),
             'bedrooms' => rand(1,6),
@@ -38,7 +40,6 @@ class PropertyFactory extends Factory
             'agent_name' => $this->faker->name(),
             'agent_phone' => $this->faker->phoneNumber(),
             'agent_email' => $this->faker->email()
- 
         ];
     }
 }

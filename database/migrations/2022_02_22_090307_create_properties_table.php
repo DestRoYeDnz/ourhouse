@@ -23,6 +23,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('address');
             $table->string('region');
+            $table->string('lat');
+            $table->string('long');
             $table->string('price');
             $table->text('custom_fields')->nullable();
             $table->text('tags')->nullable();
