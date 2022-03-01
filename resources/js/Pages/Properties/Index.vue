@@ -310,9 +310,8 @@
                             class="relative flex justify-end flex-shrink-0 text-xs mr-0  w-full"
                             >
                             <span class="radio absolute right-12 h-12">
-                              <input class='bg-gray-200 text-gray-700 text-xs' label="....." type="radio" id="unselected" name="result" value="" checked>
                               <input class='bg-gray-200 text-gray-700 text-xs' label="Yes" type="radio" id="yes" name="result" value="yes">
-                              <input class='bg-gray-200 text-gray-700 text-xs' label="No" type="radio" id="no" name="result" value="no">
+                              <input class='bg-gray-200 text-gray-700 text-xs' label="No" type="radio" id="no" name="result" value="no" checked>
                             </span>
                           </div>
                         </div>

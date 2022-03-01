@@ -26447,14 +26447,6 @@ var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   "class": "radio absolute right-12 h-12"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
   "class": "bg-gray-200 text-gray-700 text-xs",
-  label: ".....",
-  type: "radio",
-  id: "unselected",
-  name: "result",
-  value: "",
-  checked: ""
-}), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
-  "class": "bg-gray-200 text-gray-700 text-xs",
   label: "Yes",
   type: "radio",
   id: "yes",
@@ -26466,7 +26458,8 @@ var _hoisted_40 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   type: "radio",
   id: "no",
   name: "result",
-  value: "no"
+  value: "no",
+  checked: ""
 })])], -1
 /* HOISTED */
 );
