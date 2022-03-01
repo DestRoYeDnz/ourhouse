@@ -40,21 +40,21 @@
                 </td>
                 <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
                   <span>{{ property.bedrooms}}</span>
-                  <span class="block lg:hidden pl-2"> bedrooms.</span>
+                  <span class="pl-2"> bedrooms.</span>
                 </td>
                 <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
                   <span>{{ property.bathrooms}}</span>
-                  <span class="block lg:hidden pl-2"> bathrooms.</span>
+                  <span class="pl-2"> bathrooms.</span>
                 </td>
                 <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
-                  <span class="pr-4 block lg:hidden">House Area:</span>
+                  <span class="pr-4">House:</span>
                   <span>{{ property.house_area}} </span>
-                  <span class="block lg:hidden pl-2"> <span>m<sup>2</sup></span></span>
+                  <span class="pl-2"> <span>m<sup>2</sup></span></span>
                 </td>
                 <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
-                  <span class="pr-4 block lg:hidden">Land Area:</span>
+                  <span class="pr-4">Land:</span>
                   <span>{{ property.land_area }}</span>
-                  <span class="block lg:hidden">
+                  <span class="">
                   <span>m<sup>2</sup></span></span
                   >
                 </td>
