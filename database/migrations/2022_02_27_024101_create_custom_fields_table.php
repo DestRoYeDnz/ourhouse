@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->string('type');
-            $table->string('value')->nullable();
+            $table->text('value')->nullable();
             $table->string('color')->default('#2371BF');
             $table->timestamps();
 

@@ -31,7 +31,7 @@ class CustomFieldsController extends Controller
         $properties = Property::where('user_id', '=', auth()->id())->get();
 
         foreach($properties as $row){
-            $row->updateCustomFields($request->input('slug'), '');
+            $row->updateCustomFields($request->input('slug'), $row);
         }
 
         $cf = new CustomFields();

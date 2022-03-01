@@ -15,6 +15,8 @@
         <div
           class="
             flex
+            flex-col 
+            md:flex-row
             items-start
             justify-start
             space-x-4
@@ -182,7 +184,7 @@
               class="
                 grid
                 space-x-2 space-y-2
-                grid-cols-5
+                grid-1 lg:grid-cols-5
                 p-2
                 border
                 mt-2
@@ -302,16 +304,17 @@
               Create
             </BreezeButton>
           </div>
-          <div class="w-full md:w-1/3 h-full border-l border-black p-4">
-            <transition-group class="list-group" name="list" tag="ol">
+
+          <div class="w-full md:w-1/3 h-full md:border-l md:border-black p-4 max-h-screen">
+            <transition-group class="list-group overflow-y-scroll" name="list" tag="ol">
               <li
                class='relative'
                 v-for="row in custom_fields"
                 :style="dynamicStyle"
                 :key="row.id"
               >
-                <div class="w-1/2 relative group mb-2">
-                  <div  :style="'background-color: ' + row.color" class='border border-gray-300 shadow-md absolute top-2 right-2 bg-gray-300 text-white text-xs rounded-md py-0.5 px-0.5'>
+                <div class="w-2/3 relative group mb-2">
+                  <div :style="'background-color: ' + row.color" class='border border-gray-300 shadow-md absolute top-2 right-2 bg-gray-300 text-white text-xs rounded-md py-0.5 px-0.5 '>
                     {{row.type.toProperCase()}}
                   </div>
                   <div
@@ -357,6 +360,8 @@
               </li>
             </transition-group>
           </div>
+
+
         </div>
       </div>
     </div>
