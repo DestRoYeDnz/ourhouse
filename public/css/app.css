@@ -639,9 +639,6 @@ select {
 .right-2 {
   right: 0.5rem;
 }
-.right-12 {
-  right: 3rem;
-}
 .z-0 {
   z-index: 0;
 }
@@ -886,9 +883,6 @@ select {
 }
 .w-4 {
   width: 1rem;
-}
-.w-1\/2 {
-  width: 50%;
 }
 .w-2\/3 {
   width: 66.666667%;
@@ -1952,9 +1946,9 @@ select {
     line-height: 2.5rem;
   }
 
-  .lg\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:leading-9 {

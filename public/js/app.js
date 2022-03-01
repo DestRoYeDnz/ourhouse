@@ -26302,7 +26302,7 @@ var _hoisted_7 = {
   "class": "align-top p-2 text-left font-bold flex"
 };
 var _hoisted_8 = {
-  "class": "text-3xl lg:text-xl"
+  "class": "text-3xl lg:text-2xl tracking-wider"
 };
 var _hoisted_9 = {
   "class": "align-top p-2 text-left font-semibold flex"
@@ -26363,7 +26363,7 @@ var _hoisted_20 = {
   "class": "align-top p-2 text-left lg:text-center border-b border-gray-300"
 };
 var _hoisted_21 = {
-  "class": "font-bold"
+  "class": "font-bold tracking-wider"
 };
 var _hoisted_22 = {
   "class": "align-top p-2 text-left lg:text-center border-b border-gray-300"

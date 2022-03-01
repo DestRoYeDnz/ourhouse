@@ -33,7 +33,7 @@
                 "
               >
                 <td class="align-top p-2 text-left font-bold flex">
-                  <div class='text-3xl lg:text-xl'>{{ property.title }}</div>
+                  <div class='text-3xl lg:text-2xl tracking-wider'>{{ property.title }}</div>
                 </td>
                 <td class="align-top p-2 text-left font-semibold flex">
                   {{ property.address }}
@@ -59,7 +59,7 @@
                   >
                 </td>
                 <td class="align-top p-2 text-left lg:text-center border-b border-gray-300">
-                  <span class='font-bold'>{{ "$" + formatCurrency(property.price) }}</span>
+                  <span class='font-bold tracking-wider'>{{ "$" + formatCurrency(property.price) }}</span>
                 </td>
                 <td class="align-top p-2 text-left lg:text-center border-b border-gray-300">
                   <div
