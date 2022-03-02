@@ -1210,6 +1210,9 @@ select {
 .p-4 {
   padding: 1rem;
 }
+.p-0 {
+  padding: 0px;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1305,6 +1308,12 @@ select {
 }
 .pr-12 {
   padding-right: 3rem;
+}
+.pt-0\.5 {
+  padding-top: 0.125rem;
+}
+.pt-0 {
+  padding-top: 0px;
 }
 .text-left {
   text-align: left;
@@ -1627,6 +1636,10 @@ select {
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+.hover\:text-ourhouse-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(16 56 82 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   -webkit-text-decoration-line: underline;

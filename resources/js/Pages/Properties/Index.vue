@@ -38,7 +38,7 @@
               type="text"
               v-model="deposit"
               class="
-                focus:ring-indigo-500 focus:border-indigo-500
+                focus:ring-ourhouse-500 focus:border-ourhouse-500
                 block
                 w-full
                 pl-7
@@ -75,7 +75,7 @@
               type="text"
               v-model="interest_rate"
               class="
-                focus:ring-indigo-500 focus:border-indigo-500
+                focus:ring-ourhouse-500 focus:border-ourhouse-500
                 block
                 w-full
                 pl-7
@@ -101,7 +101,7 @@
               type="number"
               v-model="loan_period"
               class="
-                focus:ring-indigo-500 focus:border-indigo-500
+                focus:ring-ourhouse-500 focus:border-ourhouse-500
                 block
                 w-full
                 pl-7
@@ -117,12 +117,12 @@
 
 
 
-        <div class="flex flex-wrap">
+        <div class="">
           <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
             Frequency
           </div>
-          <div class="mt-1 relative rounded-md shadow-sm">
-            <select class="ml-4 mt-1 relative rounded-md shadow-sm" v-model="frequency">
+          <div class="mt-1 relative rounded-md">
+            <select class="w-36 border border-gray-300 relative rounded-md shadow-sm py-1 px-2 focus:ring-ourhouse-500 focus:border-ourhouse-500" v-model="frequency">
               <option value="12">Monthly</option>
             </select>
           </div>

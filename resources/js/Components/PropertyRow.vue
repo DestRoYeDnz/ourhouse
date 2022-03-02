@@ -17,8 +17,9 @@
         {{ row.title }}
       </div>
     </td>
-    <td class="align-top p-2 text-left font-semibold flex">
-      {{ row.address }}
+    <td class="flex flex-col align-top p-2 text-left font-semibold mb-4">
+      <div>{{ row.address }}</div>
+      <div><a class="text-ourhouse-400 hover:underline hover:text-ourhouse-800" target="_BLANK" :href="'https://maps.google.com/?q=' + row.address">Google Maps</a></div>
     </td>
     <td
       class="
@@ -79,7 +80,7 @@
       >
     </td>
     <td class="w-48 align-top p-2 text-left lg:text-center border-b border-gray-300">
-      <span class="font-bold tracking-wider">{{"$" + formatCurrency(row.price)}}</span><br>
+      <span class="font-bold tracking-wider text-lg">{{"$" + formatCurrency(row.price)}}</span><br>
       <span class='text-xs text-right font-thin tracking-wide'>{{'M: $' + formatCurrency((((row.price - deposit) / (loan_period * frequency)) +  (((row.price - deposit) * (interest_rate * 0.01)) / (loan_period * frequency))).toFixed(2) ) }}</span><br>
       <span class='text-xs text-right font-thin tracking-wide'>{{'W: $' + formatCurrency((((((row.price - deposit) / (loan_period * frequency)) +  (((row.price - deposit) * (interest_rate * 0.01)) / (loan_period * frequency))).toFixed(2) )*12) / 52)}}</span><br>
     </td>
