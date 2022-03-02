@@ -78,7 +78,7 @@
         <span>m<sup>2</sup></span></span
       >
     </td>
-    <td class="align-top p-2 text-left lg:text-center border-b border-gray-300">
+    <td class="w-48 align-top p-2 text-left lg:text-center border-b border-gray-300">
       <span class="font-bold tracking-wider">{{"$" + formatCurrency(row.price)}}</span><br>
       <span class='text-xs text-right font-thin tracking-wide'>{{'M: $' + formatCurrency((((row.price - deposit) / (loan_period * frequency)) +  (((row.price - deposit) * (interest_rate * 0.01)) / (loan_period * frequency))).toFixed(2) ) }}</span><br>
       <span class='text-xs text-right font-thin tracking-wide'>{{'W: $' + formatCurrency((((((row.price - deposit) / (loan_period * frequency)) +  (((row.price - deposit) * (interest_rate * 0.01)) / (loan_period * frequency))).toFixed(2) )*12) / 52)}}</span><br>

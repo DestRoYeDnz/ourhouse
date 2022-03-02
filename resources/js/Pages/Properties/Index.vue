@@ -13,13 +13,13 @@
       </div>
     </div>
     <div class="inline-block overflow-hidden min-w-full rounded-lg">
-      <section>
-        <div class="flex flex-wrap">
+      <section class='grid grid-cols-4 space-x-2'>
+        <div class="">
           <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
             Deposit
           </div>
           <div
-            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+            class="flex items-center mt-1 relative rounded-md shadow-sm"
           >
             <div
               class="
@@ -56,7 +56,7 @@
             Interest Rate
           </div>
           <div
-            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+            class="flex items-center mt-1 relative rounded-md shadow-sm"
           >
             <div
               class="
@@ -88,15 +88,17 @@
             />
           </div>
         </div>
+
+
         <div class="flex flex-wrap">
           <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
             Loan Period
           </div>
           <div
-            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+            class="flex items-center mt-1 relative rounded-md shadow-sm"
           >
             <input
-              type="text"
+              type="number"
               v-model="loan_period"
               class="
                 focus:ring-indigo-500 focus:border-indigo-500
@@ -112,38 +114,21 @@
             />
           </div>
         </div>
+
+
+
         <div class="flex flex-wrap">
           <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
             Frequency
           </div>
-          <div
-            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
-          >
-            <div
-              class="
-                absolute
-                inset-y-0
-                left-0
-                pl-3
-                flex
-                items-center
-                pointer-events-none
-              "
-            >
-              <span class="text-gray-500 sm:text-sm"> $ </span>
-            </div>
-            <select class="form-control" v-model="frequency">
+          <div class="mt-1 relative rounded-md shadow-sm">
+            <select class="ml-4 mt-1 relative rounded-md shadow-sm" v-model="frequency">
               <option value="12">Monthly</option>
             </select>
           </div>
         </div>
 
-        {{  (
-          ((listing_amount - deposit) / (loan_period * frequency)) 
-          + 
-          (((listing_amount - deposit) * (interest_rate * 0.01)) / (loan_period * frequency))).toFixed(2) 
-          
-          }}
+
       </section>
       <section>
         <div class="mt-7 overflow-x-auto min-h-128">
