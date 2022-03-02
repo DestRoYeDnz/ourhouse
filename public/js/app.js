@@ -24970,7 +24970,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), _hoisted_18, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)('M: $' + $options.formatCurrency((($props.row.price - $props.deposit) / ($props.loan_period * $props.frequency) + ($props.row.price - $props.deposit) * ($props.interest_rate * 0.01) / ($props.loan_period * $props.frequency)).toFixed(2))), 1
   /* TEXT */
-  ), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)('W: $' + $options.formatCurrency((($props.row.price - $props.deposit) / ($props.loan_period * $props.frequency) + ($props.row.price - $props.deposit) * ($props.interest_rate * 0.01) / ($props.loan_period * $props.frequency)).toFixed(2) * 12 / 52)), 1
+  ), _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)('W: $' + $options.formatCurrency(((($props.row.price - $props.deposit) / ($props.loan_period * $props.frequency) + ($props.row.price - $props.deposit) * ($props.interest_rate * 0.01) / ($props.loan_period * $props.frequency)) * 12 / 52).toFixed(2))), 1
   /* TEXT */
   ), _hoisted_22]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_23, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.custom_fields, function (cf) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
