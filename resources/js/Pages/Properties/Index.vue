@@ -16,43 +16,6 @@
       <section>
         <div class="flex flex-wrap">
           <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
-            Listing Price
-          </div>
-          <div
-            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
-          >
-            <div
-              class="
-                absolute
-                inset-y-0
-                left-0
-                pl-3
-                flex
-                items-center
-                pointer-events-none
-              "
-            >
-              <span class="text-gray-500 sm:text-sm"> $ </span>
-            </div>
-            <input
-              type="text"
-              v-model="listing_amount"
-              class="
-                focus:ring-indigo-500 focus:border-indigo-500
-                block
-                w-full
-                pl-7
-                pr-12
-                sm:text-sm
-                border-gray-300
-                rounded-md
-              "
-              placeholder="0.00"
-            />
-          </div>
-        </div>
-        <div class="flex flex-wrap">
-          <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
             Deposit
           </div>
           <div
