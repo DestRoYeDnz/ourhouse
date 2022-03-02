@@ -53,8 +53,10 @@
                 Add a new Property
               </DialogTitle>
               <div class="mt-6">
-                <div class="relative flex flex-col  items-center mb-4">
-                  <p>https://www.trademe.co.nz/a/property/residential/sale/auckland/waitakere-city/massey/listing/3485774070</p>
+                <div class="relative flex flex-col items-center mb-4">
+                  <p>
+                    https://www.trademe.co.nz/a/property/residential/sale/auckland/waitakere-city/massey/listing/3485774070
+                  </p>
                   <input
                     v-model="url"
                     class="
@@ -168,7 +170,6 @@
                                   </td>
                                 </tr>
 
-
                                 <tr v-for="row in data" :key="row.id">
                                   <td class="p-2 whitespace-nowrap">
                                     <div class="text-left">
@@ -188,14 +189,22 @@
                                   </td>
                                 </tr>
 
-
                                 <tr v-for="row in data" :key="row.id">
                                   <td class="p-2 whitespace-nowrap">
                                     <div
-                                      class="flex items-center justify-start w-full"
+                                      class="
+                                        flex
+                                        items-center
+                                        justify-start
+                                        w-full
+                                      "
                                     >
                                       <div
-                                        class="flex items-center justify-between"
+                                        class="
+                                          flex
+                                          items-center
+                                          justify-between
+                                        "
                                       >
                                         <div>
                                           <svg
@@ -212,7 +221,9 @@
                                             />
                                           </svg>
                                         </div>
-                                        <div>{{ row.bedrooms }}</div>
+                                        <div>
+                                          {{ row.bedrooms }}
+                                        </div>
                                       </div>
                                       <div
                                         class="
@@ -221,7 +232,7 @@
                                           justify-between
                                         "
                                       >
-                                        <div class='ml-8'>
+                                        <div class="ml-8">
                                           <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 512 512"
@@ -236,7 +247,9 @@
                                             />
                                           </svg>
                                         </div>
-                                        <div>{{ row.bathrooms }}</div>
+                                        <div>
+                                          {{ row.bathrooms }}
+                                        </div>
                                       </div>
                                     </div>
                                   </td>
@@ -253,21 +266,44 @@
                                   </td>
                                 </tr>
 
-
-
-
                                 <tr>
                                   <td class="p-2 whitespace-nowrap">
                                     <div
-                                      class="flex items-center justify-start w-full"
+                                      class="
+                                        flex
+                                        items-center
+                                        justify-start
+                                        w-full
+                                      "
                                     >
                                       <div
-                                        class="flex items-center justify-between"
+                                        class="
+                                          flex
+                                          items-center
+                                          justify-between
+                                        "
                                       >
                                         <div>
-                                          <svg class='w-8 h-8 mr-4' viewBox="0 0 491.312 491.312" style="enable-background:new 0 0 491.312 491.312" xml:space="preserve"><path d="M0 0v491.312h491.312L0 0zm384 451.312v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24H96v24H64v-40H48v40H16v-40h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16V38.624l436.688 436.688H400v-24h-16z"/><path d="M80 411.312h128v-16H96V231.76l163.552 163.552H224v16h74.176L80 193.136z"/></svg>
+                                          <svg
+                                            class="w-8 h-8 mr-4"
+                                            viewBox="0 0 491.312 491.312"
+                                            style="
+                                              enable-background: new 0 0 491.312
+                                                491.312;
+                                            "
+                                            xml:space="preserve"
+                                          >
+                                            <path
+                                              d="M0 0v491.312h491.312L0 0zm384 451.312v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24H96v24H64v-40H48v40H16v-40h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16V38.624l436.688 436.688H400v-24h-16z"
+                                            />
+                                            <path
+                                              d="M80 411.312h128v-16H96V231.76l163.552 163.552H224v16h74.176L80 193.136z"
+                                            />
+                                          </svg>
                                         </div>
-                                        <div>{{ data.house_area }}</div>
+                                        <div>
+                                          {{ data.house_area }}
+                                        </div>
                                       </div>
                                       <div
                                         class="
@@ -276,11 +312,27 @@
                                           justify-between
                                         "
                                       >
-                                      
-                                        <div class='ml-8'>
-                                          <svg class='w-8 h-8 mr-4' viewBox="0 0 491.312 491.312" style="enable-background:new 0 0 491.312 491.312" xml:space="preserve"><path d="M0 0v491.312h491.312L0 0zm384 451.312v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24H96v24H64v-40H48v40H16v-40h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16V38.624l436.688 436.688H400v-24h-16z"/><path d="M80 411.312h128v-16H96V231.76l163.552 163.552H224v16h74.176L80 193.136z"/></svg>
+                                        <div class="ml-8">
+                                          <svg
+                                            class="w-8 h-8 mr-4"
+                                            viewBox="0 0 491.312 491.312"
+                                            style="
+                                              enable-background: new 0 0 491.312
+                                                491.312;
+                                            "
+                                            xml:space="preserve"
+                                          >
+                                            <path
+                                              d="M0 0v491.312h491.312L0 0zm384 451.312v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24h-16v24h-32v-40h-16v40h-32v-24H96v24H64v-40H48v40H16v-40h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16v-32h24v-16H16v-32h40v-16H16V38.624l436.688 436.688H400v-24h-16z"
+                                            />
+                                            <path
+                                              d="M80 411.312h128v-16H96V231.76l163.552 163.552H224v16h74.176L80 193.136z"
+                                            />
+                                          </svg>
                                         </div>
-                                        <div>{{ data.land_area }}</div>
+                                        <div>
+                                          {{ data.land_area }}
+                                        </div>
                                       </div>
                                     </div>
                                   </td>
@@ -347,12 +399,12 @@
             </div>
           </TransitionChild>
         </div>
-                                        <div class="post-tags mb-4">
-                                    <strong>Tags : </strong>
-                                    <!-- @foreach($post->tags as $tag) -->
-                                        <span class="badge badge-info">1`2`121`2</span>
-                                    <!-- @endforeach -->
-                                </div>
+        <div class="post-tags mb-4">
+          <strong>Tags : </strong>
+          <!-- @foreach($post->tags as $tag) -->
+          <span class="badge badge-info">1`2`121`2</span>
+          <!-- @endforeach -->
+        </div>
       </div>
     </Dialog>
   </TransitionRoot>

@@ -14,221 +14,195 @@
     </div>
     <div class="inline-block overflow-hidden min-w-full rounded-lg">
       <section>
+        <div class="flex flex-wrap">
+          <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
+            Listing Price
+          </div>
+          <div
+            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+          >
+            <div
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-3
+                flex
+                items-center
+                pointer-events-none
+              "
+            >
+              <span class="text-gray-500 sm:text-sm"> $ </span>
+            </div>
+            <input
+              type="text"
+              v-model="listing_amount"
+              class="
+                focus:ring-indigo-500 focus:border-indigo-500
+                block
+                w-full
+                pl-7
+                pr-12
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
+              placeholder="0.00"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
+            Deposit
+          </div>
+          <div
+            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+          >
+            <div
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-3
+                flex
+                items-center
+                pointer-events-none
+              "
+            >
+              <span class="text-gray-500 sm:text-sm"> $ </span>
+            </div>
+            <input
+              type="text"
+              v-model="deposit"
+              class="
+                focus:ring-indigo-500 focus:border-indigo-500
+                block
+                w-full
+                pl-7
+                pr-12
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
+              placeholder="0.00"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
+            Interest Rate
+          </div>
+          <div
+            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+          >
+            <div
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-3
+                flex
+                items-center
+                pointer-events-none
+              "
+            >
+              <span class="text-gray-500 sm:text-sm"> % </span>
+            </div>
+            <input
+              type="text"
+              v-model="interest_rate"
+              class="
+                focus:ring-indigo-500 focus:border-indigo-500
+                block
+                w-full
+                pl-7
+                pr-12
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
+              placeholder="4.75"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
+            Loan Period
+          </div>
+          <div
+            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+          >
+            <input
+              type="text"
+              v-model="loan_period"
+              class="
+                focus:ring-indigo-500 focus:border-indigo-500
+                block
+                w-full
+                pl-7
+                pr-12
+                sm:text-sm
+                border-gray-300
+                rounded-md
+              "
+              placeholder="4.75"
+            />
+          </div>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="block text-sm font-xl font-semibold text-gray-700 mr-4">
+            Frequency
+          </div>
+          <div
+            class="flex items-center ml-4 mt-1 relative rounded-md shadow-sm"
+          >
+            <div
+              class="
+                absolute
+                inset-y-0
+                left-0
+                pl-3
+                flex
+                items-center
+                pointer-events-none
+              "
+            >
+              <span class="text-gray-500 sm:text-sm"> $ </span>
+            </div>
+            <select class="form-control" v-model="frequency">
+              <option value="12">Monthly</option>
+            </select>
+          </div>
+        </div>
+
+        {{  (
+          ((listing_amount - deposit) / (loan_period * frequency)) 
+          + 
+          (((listing_amount - deposit) * (interest_rate * 0.01)) / (loan_period * frequency))).toFixed(2) 
+          
+          }}
+      </section>
+      <section>
         <div class="mt-7 overflow-x-auto min-h-128">
           <table class="w-full">
             <TransitionGroup name="table" tag="tbody">
-              <tr
+              <PropertyRow
                 v-for="property in properties"
                 :key="property.id"
-                class="
-                  w-full
-                  pt-4
-                  border-b border-ourhouse-600
-                  flex flex-col flex-no
-                  wrap
-                  lg:table-row
-                  sm:rounded-none
-                  mb-2
-                  sm:mb-0
-                "
-              >
-                <td class="align-top p-2 text-left font-bold flex">
-                  <div class='text-3xl lg:text-2xl tracking-wider'>{{ property.title }}</div>
-                </td>
-                <td class="align-top p-2 text-left font-semibold flex">
-                  {{ property.address }}
-                </td>
-                <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
-                  <span>{{ property.bedrooms}}</span>
-                  <span class="pl-2"> bedrooms.</span>
-                </td>
-                <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
-                  <span>{{ property.bathrooms}}</span>
-                  <span class="pl-2"> bathrooms.</span>
-                </td>
-                <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
-                  <span class="pr-4">House:</span>
-                  <span>{{ property.house_area}} </span>
-                  <span class="pl-2"> <span>m<sup>2</sup></span></span>
-                </td>
-                <td class="align-top p-2 text-left lg:text-center border-b border-gray-300 flex">
-                  <span class="pr-4">Land:</span>
-                  <span>{{ property.land_area }}</span>
-                  <span class="">
-                  <span>m<sup>2</sup></span></span
-                  >
-                </td>
-                <td class="align-top p-2 text-left lg:text-center border-b border-gray-300">
-                  <span class='font-bold tracking-wider'>{{ "$" + formatCurrency(property.price) }}</span>
-                </td>
-                <td class="align-top p-2 text-left lg:text-center border-b border-gray-300">
-                  <div
-                    class="leading-6 flex flex-col"
-                    v-for="cf in custom_fields"
-                    :key="cf.id"
-                  >
-
-
-                    <div v-if="cf.type == 'value'">
-                      <div
-                        class="
-                          flex
-                          items-start
-                          relative
-                          font-bold
-                          text-xs
-                          rounded-md
-                          text-white
-                          px-0.5
-                          py-0.5
-                          mb-1
-                          mr-2
-                        "
-                        :style="'background-color: ' + cf.color"
-                      >
-                        <span
-                          class="flex-shrink-0 font-base text-xs ml-4 mt-1.5 w-24 min-w-24 text-left"
-                          >{{cf.name}}:</span
-                        >
-
-                        <input
-                          type="text"
-                          :style="'background-color: ' + cf.color"
-                          class="
-                            ml-4
-                            block
-                            w-full
-                            px-2
-                            py-1
-                            text-xs text-white
-                            transition
-                            rounded-md
-                            ease-in-out
-                            m-0.5
-                            border border-white
-                          "
-                        />
-                      </div>
-                    </div>
-
-                    <div v-if="cf.type == 'dropdown'">
-                      <div
-                        class="
-                          flex
-                          items-start
-                          relative
-                          font-bold
-                          text-xs
-                          rounded-md
-                          text-white
-                          px-0.5
-                          py-0.5
-                          mb-1
-                          mr-2
-                        "
-                        :style="'background-color: ' + cf.color"
-                      >
-                        <span
-                          class="flex-shrink-0 font-base text-xs ml-4 mt-1.5  w-24 min-w-24  text-left"
-                          >{{ cf.name }}:</span
-                        >
-
-                        <select
-                          :style="'background-color: ' + cf.color"
-                          class="
-                            ml-4
-                            form-select
-                            appearance-none
-                            block
-                            w-full
-                            px-2
-                            py-1
-                            text-xs text-white
-                            transition
-                            ease-in-out
-                            rounded-md
-                            m-0
-                            font-bold
-                            leading-wide
-                            border border-white
-                            appearance:
-                            none;
-                            focus:text-white-700 focus:outline-none
-                          "
-                        >
-                          <option selected>Select a value for {{cf.name}}</option>
-                          <option v-for="(row, index) in getCustomFieldValue(cf.value)" :key="index" :value="row">{{row}}</option>
-                        </select>
-                      </div>
-                    </div>
-
-
-
-                   <div v-if="cf.type == 'boolean'">
-                      <div
-                        class="
-                          flex
-                          justify-between
-                          relative
-                          font-bold
-                          text-xs
-                          rounded-md
-                          text-white
-                          px-0.5
-                          py-0.5
-                          mb-1
-                          mr-2
-                        "
-                        :style="'background-color: ' + cf.color">
-                        <span
-                          class="flex-shrink-0 font-base text-xs ml-4 mt-1.5 w-24 min-w-24 text-left">
-                          {{cf.name}}:
-                          </span>
-                        <div
-                          class="
-                            relative
-                            flex
-                            justify-end
-                            flex-shrink-0
-                            text-xs
-                            mr-0
-                            w-48
-                          "
-                        >
-                          <span class="radio">
-                            <input
-                              class="bg-white text-gray-700 text-xs"
-                              label="Yes"
-                              type="radio"
-                              id="yes"
-                              name="result"
-                              value="yes"
-                            />
-                            <input
-                              class="bg-white text-gray-700 text-xs"
-                              label="No"
-                              type="radio"
-                              id="no"
-                              name="result"
-                              value="no"
-                              checked
-                            />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </td>
-              </tr>
+                :custom_fields="custom_fields"
+                :listingAmount="listing_amount"
+                :deposit="deposit"
+                :loan_period="loan_period"
+                :frequency="frequency"
+                :listing_amount="listing_amount"
+                :interest_rate="interest_rate"
+                :row="property"
+              />
             </TransitionGroup>
           </table>
         </div>
       </section>
     </div>
-    <AddPropertyModal
-      :modalActive="addModalOpen"
-      @close="addModalOpen = false"
-    />
   </BreezeAuthenticatedLayout>
 </template>
 
@@ -239,13 +213,19 @@ import Pagination from "@/Components/Pagination.vue";
 import BreezeButton from "@/Components/Button.vue";
 import DropdownMenu from "@/Components/DropdownMenu.vue";
 import AddPropertyModal from "@/Components/AddPropertyModal.vue";
+import PropertyRow from "@/Components/PropertyRow.vue";
 
 export default {
   data() {
     return {
-      addModalOpen: false,
-      messageModalOpen: false,
       dropdown: false,
+      listing_amount: 249000,
+      deposit: 80000,
+      interest_rate: 4.5,
+      loan_period: 30,
+      frequency: 12,
+      visible: false,
+      animate: false,
       number: {
         decimal: ".",
         separator: ",",
@@ -266,13 +246,18 @@ export default {
     BreezeButton,
     DropdownMenu,
     AddPropertyModal,
+    PropertyRow,
   },
   props: {
     properties: Object,
     custom_fields: Object,
   },
   methods: {
-    getCustomFieldValue(json){
+    formatCurrency(price) {
+      let dollarUSLocale = Intl.NumberFormat("en-US");
+      return dollarUSLocale.format(price);
+    },
+    getCustomFieldValue(json) {
       const obj = JSON.parse(json);
       return obj;
     },
@@ -284,10 +269,6 @@ export default {
         iter = "0" + iter;
       }
       return "#" + iter;
-    },
-    formatCurrency(price) {
-      let dollarUSLocale = Intl.NumberFormat("en-US");
-      return dollarUSLocale.format(price);
     },
     resendVerification() {
       this.$inertia.post("/email/verification-notification", this.form);
@@ -334,7 +315,6 @@ export default {
 };
 </script>
 
-
 <style>
 .vue3-snackbar-message-title {
   font-size: 14px;
@@ -353,40 +333,5 @@ export default {
 .property-table-enter > * {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-}
-
-.radio {
-  padding: 4px;
-  border-radius: 3px;
-  position: relative;
-}
-
-.radio input {
-  width: auto;
-  height: 100%;
-  appearance: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 2px;
-  padding: 4px 8px;
-  font-size: 14px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  transition: all 100ms linear;
-}
-
-.radio input:checked {
-  background-image: linear-gradient(180deg, #95d891, #74bbad);
-  color: #fff;
-  box-shadow: 0 1px 1px #0000002e;
-  text-shadow: 0 1px 0px #79485f7a;
-}
-
-.radio input:before {
-  content: attr(label);
-  display: inline-block;
-  text-align: center;
-  width: 100%;
 }
 </style>
