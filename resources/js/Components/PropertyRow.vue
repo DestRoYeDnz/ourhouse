@@ -75,7 +75,7 @@
     >
       <span class="pr-4">Land:</span>
       <span>{{ row.land_area }}</span>
-      <span class="">
+      <span class="pl-2">
         <span>m<sup>2</sup></span></span
       >
     </td>
