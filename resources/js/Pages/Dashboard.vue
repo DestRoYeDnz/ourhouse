@@ -8,7 +8,6 @@
         Dashboard
       </div>
       <div class="flex flex-col">
-          <vue-dropdown animation="slide" color="outhouse"></vue-dropdown>
 
 
         <span

@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+    mode: 'jit',
     content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
         "./storage/framework/views/*.php",
@@ -28,7 +29,6 @@ module.exports = {
                   800: '#103852',
                   900: '#071823',
                 },
-                // ...
               },
 
         },

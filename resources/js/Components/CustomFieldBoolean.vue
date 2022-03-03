@@ -9,44 +9,28 @@
             {{ cf.name }}:
         </span>
         <div class="relative flex justify-end flex-shrink-0 text-xs mr-0 w-48">
-            <span class="radio">
-                <input
-                    class="bg-white text-gray-700 text-xs"
-                    label="Yes"
-                    type="radio"
-                    id="yes"
-                    name="result"
-                    value="yes"
-                    v-model='modelValue'
-                    @input="$emit('update:modelValue', $event.target.value)"
-                />
-                <input
-                    class="bg-white text-gray-700 text-xs"
-                    label="No"
-                    type="radio"
-                    id="no"
-                    name="result"
-                    value="no"
-                    v-model='modelValue'
-                    @input="$emit('update:modelValue', $event.target.value)"
-                    checked
-                />
-            </span>
+           <Toggle v-model="isToggleOn" onText="Hide Map" offText="Show Map"/>
         </div>
     </div>
 </template>
 
 <script>
+import Toggle from '@/Components/Toggle'
+
 export default {
     name: "CustomFieldBoolean",
     data() {
         return {
             modelValue: 'no',
+            isToggleOn: true
         };
     },
     props: {
         cf: Object,
         errors: Object,
+    },
+    components: {
+        Toggle
     },
     methods: {
         getCustomFieldValue(json) {

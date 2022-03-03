@@ -1,3 +1,34 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+
+/* CHECKBOX TOGGLE SWITCH */
+.form-switch {
+    @apply relative select-none w-12 mr-2 leading-normal;
+}
+
+.form-switch-checkbox {
+    @apply hidden;
+}
+
+.form-switch-label {
+    @apply block overflow-hidden cursor-pointer bg-white border rounded-full h-6  shadow-inner;
+    transition: background-color 0.2s ease-in;
+}
+
+.form-switch-label:before {
+    @apply absolute block bg-white float-left w-6 border rounded-full -ml-1;
+    right: 50%;
+    content: "";
+    transition: all 0.2s ease-in;
+}
+
+.form-switch-checkbox:checked + .form-switch-label {
+    @apply bg-green-500 shadow-none;
+}
+
+
+.form-switch-checkbox:checked + .form-switch-label:before {
+    @apply float-right;
+}
+
+@tailwind utilities;
