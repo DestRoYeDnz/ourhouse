@@ -91,8 +91,6 @@
                     :listingAmount="listing_amount"
                     :deposit="deposit"
                     :loan_period="loan_period"
-                    :frequency="frequency"
-                    :listing_amount="listing_amount"
                     :interest_rate="interest_rate"
                     :row="row"
                 />
@@ -107,8 +105,7 @@
                     :listingAmount="listing_amount"
                     :deposit="deposit"
                     :loan_period="loan_period"
-                    :frequency="frequency"
-                    :listing_amount="listing_amount"
+                    
                     :interest_rate="interest_rate"
                     :row="row"
                 />
@@ -123,8 +120,7 @@
                     :listingAmount="listing_amount"
                     :deposit="deposit"
                     :loan_period="loan_period"
-                    :frequency="frequency"
-                    :listing_amount="listing_amount"
+                    
                     :interest_rate="interest_rate"
                     :row="row"
                 />
@@ -186,7 +182,6 @@ export default {
         listingAmount: Number,
         deposit: Number,
         loan_period: Number,
-        frequency: Number,
         listing_amount: Number,
         interest_rate: Number,
     },

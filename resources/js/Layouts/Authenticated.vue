@@ -1,19 +1,20 @@
 <template>
-    <div class="flex h-screen bg-gray-200 font-roboto">
+    <div class="flex h-screen bg-white font-roboto">
             <navigation />
 
             <div class="flex overflow-hidden flex-col flex-1">
                 <Header />
 
-                <main class="overflow-y-auto overflow-x-hidden flex-1 bg-gray-200">
+                <main class="overflow-y-auto overflow-x-hidden flex-1">
                     <div class="w-11/12 lg:w-5/6 px-6 py-8 mx-auto">
                         <h3 class="mb-4 text-3xl font-medium text-gray-700">
                             <slot name="header" />
                         </h3>
                         <Alerts 
                         :user=" this.$page.props.auth.user"
+                        
                         />
-                        <slot />
+                        <slot class="mt-8" />
                     </div>
                 </main>
             </div>

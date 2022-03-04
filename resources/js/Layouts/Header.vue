@@ -8,7 +8,7 @@
             </svg>
         </button>
     </div>
-
+        <div id="add_mortgage_button"></div>
     <div class="flex items-center mr-6">
         <dropdown>
             <template #trigger>

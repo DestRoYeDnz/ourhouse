@@ -34,6 +34,7 @@
         "@coders-tm/vue-number-format": "^2.1.0",
         "@headlessui/vue": "^1.5.0",
         "@heroicons/vue": "^1.0.5",
+        "simple-mask-money": "^3.0.1",
         "vue-numerals": "^4.0.6",
         "vue3-snackbar": "^1.1.2"
     }

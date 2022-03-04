@@ -3,13 +3,10 @@
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
-use Guzzle\GuzzleHttp;
-use voku\helper\HtmlDomParser;
-use App\Mail\OrderShipped;
 use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Http\Controllers\CustomFieldsController;
-
+use App\Http\Controllers\UserSettingsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +19,6 @@ use App\Http\Controllers\CustomFieldsController;
 |
 */
 require __DIR__.'/auth.php';
-
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -41,26 +37,12 @@ Route::get('/custom_fields', function() {
     echo  $properties->getCustomFields($name);
 }); 
 
-
-/* Route::get('email', function () {
-    Mail::to(auth()->user())->send(new OrderShipped());
-});
- */
 Route::post('email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
     $request->session()->flash('success', 'Thanks, We have re-sent your Verification email');
     return back();
 })->middleware(['auth', 'throttle:6,1'])->name('verification.send');
 
-/* 
-Route::get('test', function () {
-    $url = "https://www.trademe.co.nz/a/property/residential/sale/auckland/rodney/red-beach/listing/3476259730";
-    $html = HtmlDomParser::file_get_html($url);
-
-    foreach ($html->find('a') as $e) {
-        echo $e->href;
-    }
-}); */
 
 Route::get('/dashboard', function () {
     $properties = Property::where('user_id', '=', auth()->id())->get();
@@ -70,7 +52,6 @@ Route::get('/dashboard', function () {
     ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-
 Route::middleware('auth')->group(function () {
     Route::get('properties', [\App\Http\Controllers\PropertyController::class, 'index'])->name('properties.index');
     Route::post('properties/delete', [\App\Http\Controllers\PropertyController::class, 'destroy']);
@@ -78,5 +59,6 @@ Route::middleware('auth')->group(function () {
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
     Route::get('property/custom-attributes',[CustomFieldsController::class, 'index'])->name('custom_fields.index');
     Route::post('property/custom-attributes',[CustomFieldsController::class, 'store'])->name('custom_fields.store');
+    Route::post('settings',[UserSettingsController::class, 'store'])->name('custom_fields.store');
 
 });

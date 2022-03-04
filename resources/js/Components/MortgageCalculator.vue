@@ -17,8 +17,6 @@ export default {
         listingAmount: Number,
         deposit: Number,
         loan_period: Number,
-        frequency: Number,
-        listing_amount: Number,
         interest_rate: Number,
         errors: Object,
         term: String,
@@ -28,7 +26,7 @@ export default {
             return this.row.price - this.deposit
         },
         numrepayments() {
-            return  this.loan_period * this.frequency
+            return  this.loan_period *12
         }
         ,
         interest() {

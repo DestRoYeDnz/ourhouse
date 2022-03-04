@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Property;
 use App\Models\CustomFields;
-
+use App\Models\UserSettings;
 
 class PropertyController extends Controller
 {
@@ -14,9 +14,12 @@ class PropertyController extends Controller
     {
         $properties = Property::where('user_id', '=', auth()->id())->get();
         $custom_fields = CustomFields::where('user_id', '=', auth()->id())->get();
+        $settings = UserSettings::where('user_id', '=', auth()->id())->get();
+        
         
         return Inertia::render('Properties/Index', [
             'properties' => $properties,
+            'setting' => $settings,
             'custom_fields' => $custom_fields
         ]);
     }
