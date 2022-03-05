@@ -19,14 +19,16 @@
         </div>
         <div class="inline-block min-w-full overflow-hidden rounded-lg">
             <section>
+                <transition appear name="slide-fade">
                 <MortgageDetails
-                class='absolute top-16 right-5 z-10 bg-ourhouse-100 rounded-md shadow-lg transition transition-duration-500'
+                    class='absolute top-16 right-5 z-10 bg-ourhouse-100 rounded-md shadow-lg transition duration-200 ease-in-out'
                     title="title"
                     @changed-listing-amount="methodListingAmount"
                     @changed-deposit-amount="methodDepositAmount"
                     @changed-interest-rate-amount="methodInterestRateAmount"
                     @changed-loan-period-amount="methodLoanPeriod"
                 />
+                </transition>
             </section>
 
             <section class="grid grid-cols-4 space-x-2"></section>
@@ -182,5 +184,17 @@ export default {
 .property-table-enter > * {
     padding-top: 0px !important;
     padding-bottom: 0px !important;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>

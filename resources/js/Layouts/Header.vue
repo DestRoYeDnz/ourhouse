@@ -8,8 +8,14 @@
             </svg>
         </button>
     </div>
-        <div id="add_mortgage_button"></div>
-    <div class="flex items-center mr-6">
+        
+
+<div class='flex items-center'>
+    <div class='bg-ourhouse-500 w-10 h-5 rounded-full relative flex items-center'>
+        <div class='w-4 h-4 z-10 bg-white rounded-full ml-1 focus:translate-x-4'></div>
+    </div>
+
+    <div class="flex items-center mx-6">
         <dropdown>
             <template #trigger>
                 <button @click="dropdownOpen = ! dropdownOpen" class="block overflow-hidden relative">
@@ -28,6 +34,8 @@
             </template>
         </dropdown>
     </div>
+</div>
+
 </header>
 </template>
 

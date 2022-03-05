@@ -35,6 +35,10 @@
                             <option value="value">Single Value</option>
                             <option value="dropdown">Dropdown</option>
                             <option value="boolean">Yes / No</option>
+                            <option value="computed flex items-center justify-between">
+                                <div>Distance To</div>
+                                <div class='bg-blue-500 rounded-lg' >Pro</div>
+                                </option>
                             <option value="computed">Computed Value</option>
                         </select>
 
