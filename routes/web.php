@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Property;
 use App\Http\Controllers\CustomFieldsController;
 use App\Http\Controllers\UserSettingsController;
-
+use App\Http\Controllers\SubscriptionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +18,8 @@ use App\Http\Controllers\UserSettingsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-require __DIR__.'/auth.php';
+
+require __DIR__ . '/auth.php';
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -29,13 +30,12 @@ Route::get('/', function () {
     ]);
 });
 
-
-Route::get('/custom_fields', function() {
+Route::get('/custom_fields', function () {
     $properties = Property::first();
     $name = 'internet_available';
     $properties->C($name, 'Fibre, VDSL, ADSL');
     echo  $properties->getCustomFields($name);
-}); 
+});
 
 Route::post('email/verification-notification', function (Request $request) {
     $request->user()->sendEmailVerificationNotification();
@@ -57,8 +57,26 @@ Route::middleware('auth')->group(function () {
     Route::post('properties/delete', [\App\Http\Controllers\PropertyController::class, 'destroy']);
     Route::get('profile', [\App\Http\Controllers\ProfileController::class, 'show'])->name('profile.show');
     Route::put('profile', [\App\Http\Controllers\ProfileController::class, 'update'])->name('profile.update');
-    Route::get('property/custom-attributes',[CustomFieldsController::class, 'index'])->name('custom_fields.index');
-    Route::post('property/custom-attributes',[CustomFieldsController::class, 'store'])->name('custom_fields.store');
-    Route::post('settings',[UserSettingsController::class, 'store'])->name('custom_fields.store');
+    Route::get('property/custom-attributes', [CustomFieldsController::class, 'index'])->name('custom_fields.index');
+    Route::post('property/custom-attributes', [CustomFieldsController::class, 'store'])->name('custom_fields.store');
+    Route::post('settings', [UserSettingsController::class, 'store'])->name('custom_fields.store');
 
+
+    Route::get('/subscription/create', [SubscriptionController::class, 'index'])->name('subscription.create');
+    Route::get('/subscription/checkout', [SubscriptionController::class, 'checkout'])->name('subscription.checkout');
+    //Route::post('/subscription/create', [SubscriptionController::class, 'store'])->name('subscription.store');
+    Route::post('order-post', ['as' => 'order-post', 'uses' => 'SubscriptionController@orderPost']);
+
+    Route::get('/billing-portal', function (Request $request) {
+        if($request->user()->stripe_id)
+        {
+            return $request->user()->redirectToBillingPortal();
+        } 
+        else
+        {
+            $request->session()->flash('failure', 'Sorry you are not a customer');
+            return back();
+        }
+        
+    });
 });

@@ -52,18 +52,27 @@
                 >
                     <span class="block">Blog</span>
                 </a>
-                <a
+
+                <a v-if="!this.$page.props.loggedIn"
                     href="/login"
                     class="whitespace-no-wrap inline-flex items-center justify-center rounded-md border border-gray-700 bg-bg-gray-200 px-4 py-2 text-base leading-6 text-gray-500 shadow-sm hover:bg-gray-600"
                 >
                     Login
                 </a>
-                <a
+                <a v-if="!this.$page.props.loggedIn"
                     href="/register"
                     class="whitespace-no-wrap inline-flex items-center justify-center rounded-md border border-gray-700 bg-gray-700 px-4 py-2 text-base leading-6 text-white shadow-sm hover:bg-gray-600"
                 >
                     Signup
                 </a>
+                    <a v-if="this.$page.props.loggedIn"
+                    href="/dashboard"
+                    class="whitespace-no-wrap inline-flex items-center justify-center rounded-md border border-gray-700 bg-gray-700 px-4 py-2 text-base leading-6 text-white shadow-sm hover:bg-gray-600"
+                >
+                    Dashboard
+                </a>
+
+
             </nav>
 
             <!-- Mobile Button -->
@@ -491,7 +500,6 @@
 <script>
 import { Head, Link } from "@inertiajs/inertia-vue3";
 import Footer from '@/Layouts/Footer.vue'
-
 export default {
     data() {
         return {
@@ -509,5 +517,5 @@ export default {
         laravelVersion: String,
         phpVersion: String,
     },
-};
+}
 </script>

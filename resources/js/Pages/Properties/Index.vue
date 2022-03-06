@@ -2,7 +2,7 @@
     <Head title="My Properties" />
 
     <BreezeAuthenticatedLayout>
-        <vue3-snackbar top right :duration="4000"></vue3-snackbar>
+        
 
         <div class="relative mb-8 flex items-start justify-between">
             <div class="mb-4 text-3xl font-medium text-gray-700">
@@ -21,7 +21,7 @@
             <section>
                 <transition appear name="slide-fade">
                 <MortgageDetails
-                    class='absolute top-16 right-5 z-10 bg-ourhouse-100 rounded-md shadow-lg transition duration-200 ease-in-out'
+                    class='absolute top-32 right-5 z-10 bg-ourhouse-100 rounded-md shadow-lg transition duration-200 ease-in-out'
                     title="title"
                     @changed-listing-amount="methodListingAmount"
                     @changed-deposit-amount="methodDepositAmount"
@@ -151,6 +151,11 @@ export default {
                 this.successMessage(val);
             }
         },
+        failedFlash(val) {
+            if (val.length > 0) {
+                this.failedMessage(val);
+            }
+        },
     },
     computed: {
         getValue(row, slug) {
@@ -161,6 +166,9 @@ export default {
         },
         successFlash() {
             return this.$page.props.flash.success;
+        },
+        failedFlash() {
+            return this.$page.props.flash.failed;
         },
     },
 };

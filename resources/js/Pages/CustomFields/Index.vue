@@ -28,19 +28,9 @@
                         <label class="block text-lg font-medium text-gray-700"
                             >Field Type</label
                         >
-                        <select
-                            v-model="custom_field_type"
-                            class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-                        >
-                            <option value="value">Single Value</option>
-                            <option value="dropdown">Dropdown</option>
-                            <option value="boolean">Yes / No</option>
-                            <option value="computed flex items-center justify-between">
-                                <div>Distance To</div>
-                                <div class='bg-blue-500 rounded-lg' >Pro</div>
-                                </option>
-                            <option value="computed">Computed Value</option>
-                        </select>
+                        <Select v-model="custom_field_type"/>
+
+
 
                         <div
                             v-if="custom_field_type == 'dropdown'"
@@ -84,6 +74,7 @@
                                 </ul>
                             </div>
                         </div>
+                        
 
                         <label
                             class="mt-2 block text-lg font-medium text-gray-700"
@@ -239,6 +230,7 @@ import BreezeButton from "@/Components/Button.vue";
 import DropdownMenu from "@/Components/DropdownMenu.vue";
 import AddPropertyModal from "@/Components/AddPropertyModal.vue";
 import MessageModal from "@/Components/MessageModal.vue";
+import Select from '@/Components/Select.vue';
 
 export default {
     data() {
@@ -283,6 +275,7 @@ export default {
         DropdownMenu,
         AddPropertyModal,
         MessageModal,
+        Select
     },
     props: {
         custom_fields: Object,
@@ -305,10 +298,13 @@ export default {
         },
         submit() {
             let form = {
+                custom_field: {
+                    name: '',
+                },
                 name: this.custom_field,
                 slug: this.slug,
                 color: this.color,
-                type: this.custom_field_type,
+                type: this.custom_field_type.name,
             };
 
             if (
@@ -330,7 +326,7 @@ export default {
             return dollarUSLocale.format(price);
         },
         sanitizeTitle(title) {
-            console.log(title);
+            if(title){
             var slug = "";
             // Change to lower case
             var titleLower = title.toLowerCase();
@@ -350,6 +346,10 @@ export default {
             slug = slug.replace(/\s+/g, "_");
 
             return slug;
+            }
+            else {
+                return 0;
+            }
         },
     },
     watch: {

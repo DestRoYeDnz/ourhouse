@@ -43,30 +43,10 @@ export default {
     properties: Object,
   },
   methods: {
-    successMessage(message) {
-      this.$snackbar.add({
-        type: "success",
-        text: message,
-        background: "green",
-        dismissible: true,
-      });
-      console.log("sending toast");
-    },
-    failedMessage() {
-      this.$snackbar.add({
-        type: "success",
-        text: this.successFlash,
-        background: "green",
-        dismissible: true,
-      });
-    },
+    
   },
   watch: {
-    successFlash(val) {
-      if (val.length > 0) {
-        this.successMessage(val);
-      }
-    },
+    
   },
   computed: {
     price() {
@@ -75,9 +55,7 @@ export default {
     user() {
       return this.$page.props.auth.user;
     },
-    successFlash() {
-      return this.$page.props.flash.success;
-    },
+   
   },
 };
 </script>

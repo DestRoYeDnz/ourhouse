@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Illuminate\Support\Facades\Auth;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -33,13 +34,26 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request)
     {
+        $plan = 'free';
+        
+        if(null != $request->user()){   
+            if ($request->user()->subscribed('prod_J1nC6riA5YJtVm')) {
+                $plan = 'free';
+            } else if ($request->user()->subscribed('prod_J1nC5GU1aX7bjh')) {
+                $plan = 'pro';
+            }
+        }
+
         return array_merge(parent::share($request), [
             'auth' => [
                 'user' => $request->user(),
+                'subscription' => $plan,
             ],
+            'loggedIn' => Auth::check(),
             'flash' => function () use ($request) {
                 return [
                     'success' => $request->session()->get('success'),
+                    'failure' => $request->session()->get('failure'),
                 ];
             },
             'showingMobileMenu' => false,
