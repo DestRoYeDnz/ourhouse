@@ -22804,7 +22804,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     successMessage: function successMessage(message) {
-      console.log('--------' + val);
       this.$snackbar.add({
         type: "success",
         text: message,
@@ -22813,7 +22812,6 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     failedMessage: function failedMessage(message) {
-      console.log('---' + val);
       this.$snackbar.add({
         type: "error",
         text: message,

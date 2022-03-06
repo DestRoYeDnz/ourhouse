@@ -77,7 +77,6 @@ export default {
     },
     methods: {
         successMessage(message) {
-            console.log('--------' + val)
             this.$snackbar.add({
                 type: "success",
                 text: message,
@@ -86,7 +85,6 @@ export default {
             });
         },
         failedMessage(message) {
-            console.log('---' + val)
             this.$snackbar.add({
                 type: "error",
                 text:message,
