@@ -75,6 +75,14 @@
                             >
                         </div>
                     </div>
+                    <div
+                        class="flex items-start justify-between border-b border-gray-300 p-2 text-left align-top lg:text-center"
+                    >
+                        <span class="pr-4">Notes:</span>
+                        <div class="ml-8 flex-1">
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </td>
@@ -136,22 +144,35 @@
                 />
             </div>
             <div class="mt-8 flex flex-col items-start justify-between px-8">
-                <div class="flex flex-col items-start justify-between w-full">
-                    <div class="flex items-center justify-between w-full">
-                        <span class="pl-8 font-semibold  text-sm">Estate Agent:</span>
-                        <span class="flex-1 pl-8 text-right font-semibold text-sm">{{
-                            row.agent_name
-                        }}</span>
+                <div class="flex w-full flex-col items-start justify-between">
+                    <div class="flex w-full items-center justify-between">
+                        <span class="pl-8 text-sm font-semibold"
+                            >Estate Agent:</span
+                        >
+                        <span
+                            class="flex-1 pl-8 text-right text-sm font-semibold"
+                            >{{ row.agent_name }}</span
+                        >
                     </div>
-                    <div class="flex items-center justify-between  w-full">
-                        <span class="pl-8 font-semibold  text-sm">Email:</span>
-                        <span class="pl-8 text-right font-semibold  text-sm text-ourhouse-400 hover:text-ourhouse-500 hover:underline">
-                            <a :href="'mailto: ' + row.agent_email + '?subject=Enquiry about - '+ row.address">{{row.agent_email}} </a>
+                    <div class="flex w-full items-center justify-between">
+                        <span class="pl-8 text-sm font-semibold">Email:</span>
+                        <span
+                            class="pl-8 text-right text-sm font-semibold text-ourhouse-400 hover:text-ourhouse-500 hover:underline"
+                        >
+                            <a
+                                :href="
+                                    'mailto: ' +
+                                    row.agent_email +
+                                    '?subject=Enquiry about - ' +
+                                    row.address
+                                "
+                                >{{ row.agent_email }}
+                            </a>
                         </span>
                     </div>
-                    <div class="flex items-center justify-between  w-full">
-                        <span class="pl-8 font-semibold  text-sm">Phone:</span>
-                        <span class="pl-8 text-right font-semibold  text-sm">{{
+                    <div class="flex w-full items-center justify-between">
+                        <span class="pl-8 text-sm font-semibold">Phone:</span>
+                        <span class="pl-8 text-right text-sm font-semibold">{{
                             row.agent_phone
                         }}</span>
                     </div>
@@ -164,7 +185,7 @@
             >
                 <div v-if="custom_fields.length > 0">
                     <div
-                        class="flex flex-col leading-6 text-right"
+                        class="flex flex-col text-right leading-6"
                         v-for="cf in custom_fields"
                         :key="cf.id"
                     >
@@ -186,7 +207,7 @@
                     </div>
                 </div>
                 <div v-else class="w-full">
-                    <div class="flex flex-col items-center justify-start">
+                    <div class="flex h-max flex-col items-center justify-start">
                         <div>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -204,7 +225,7 @@
                             </svg>
                         </div>
                         <span class="text-gray-300"
-                            >Add some Custom Attributes</span
+                            >Add your first custom attribute.</span
                         >
                     </div>
                 </div>
@@ -225,13 +246,14 @@ export default {
         return {
             form: {},
             isToggleOn: true,
+            description: null,
         };
     },
     components: {
         CustomFieldDropdown,
         CustomFieldSingleValue,
         CustomFieldBoolean,
-        MortgageCalculator,
+        MortgageCalculator
     },
     props: {
         custom_fields: Object,
@@ -252,4 +274,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+
+</style>

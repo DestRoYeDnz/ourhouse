@@ -8,6 +8,7 @@ import number from '@coders-tm/vue-number-format'
 import { SnackbarService, Vue3Snackbar } from "vue3-snackbar";
 import "vue3-snackbar/dist/style.css";
 
+
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'ourHouse';
 
 createInertiaApp({

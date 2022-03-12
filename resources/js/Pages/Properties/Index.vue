@@ -23,7 +23,6 @@
                 <MortgageDetails
                     class='absolute top-32 right-5 z-10 bg-ourhouse-100 rounded-md shadow-lg transition duration-200 ease-in-out'
                     title="title"
-                    @changed-listing-amount="methodListingAmount"
                     @changed-deposit-amount="methodDepositAmount"
                     @changed-interest-rate-amount="methodInterestRateAmount"
                     @changed-loan-period-amount="methodLoanPeriod"
@@ -93,7 +92,7 @@ export default {
         DropdownMenu,
         AddPropertyModal,
         PropertyRow,
-        MortgageDetails,
+        MortgageDetails
     },
     props: {
         properties: Object,

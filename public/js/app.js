@@ -22615,7 +22615,8 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: {},
-      isToggleOn: true
+      isToggleOn: true,
+      description: null
     };
   },
   components: {
@@ -25514,18 +25515,28 @@ var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_18 = {
-  "class": "w-1/4 border-b border-gray-300 p-4 text-left align-top lg:text-center"
-};
-var _hoisted_19 = {
-  "class": "font-boldtext-right text-4xl tracking-wider"
-};
-
-var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "flex items-start justify-between border-b border-gray-300 p-2 text-left align-top lg:text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "pr-4"
+}, "Notes:"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "ml-8 flex-1"
+})], -1
 /* HOISTED */
 );
 
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_19 = {
+  "class": "w-1/4 border-b border-gray-300 p-4 text-left align-top lg:text-center"
+};
+var _hoisted_20 = {
+  "class": "font-boldtext-right text-4xl tracking-wider"
+};
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1
+/* HOISTED */
+);
+
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "p-0"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "font-boldtext-right pl-0 text-lg uppercase tracking-widest text-ourhouse-400"
@@ -25533,98 +25544,98 @@ var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
 /* HOISTED */
 );
 
-var _hoisted_22 = {
+var _hoisted_23 = {
   "class": "mt-8 flex items-center justify-between px-8"
 };
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "mx-auto px-8 text-left font-bold tracking-wider"
 }, "Monthly:", -1
 /* HOISTED */
 );
 
-var _hoisted_24 = {
+var _hoisted_25 = {
   "class": "flex items-center justify-between px-8"
 };
 
-var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "mx-auto px-8 text-left font-bold tracking-wider"
 }, "Fortnightly:", -1
 /* HOISTED */
 );
 
-var _hoisted_26 = {
+var _hoisted_27 = {
   "class": "flex items-center justify-between px-8"
 };
 
-var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "mx-auto px-8 text-left font-bold tracking-wider"
 }, "Weekly:", -1
 /* HOISTED */
 );
 
-var _hoisted_28 = {
+var _hoisted_29 = {
   "class": "mt-8 flex flex-col items-start justify-between px-8"
 };
-var _hoisted_29 = {
-  "class": "flex flex-col items-start justify-between w-full"
-};
 var _hoisted_30 = {
-  "class": "flex items-center justify-between w-full"
+  "class": "flex w-full flex-col items-start justify-between"
+};
+var _hoisted_31 = {
+  "class": "flex w-full items-center justify-between"
 };
 
-var _hoisted_31 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "pl-8 font-semibold text-sm"
+var _hoisted_32 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "pl-8 text-sm font-semibold"
 }, "Estate Agent:", -1
 /* HOISTED */
 );
 
-var _hoisted_32 = {
-  "class": "flex-1 pl-8 text-right font-semibold text-sm"
-};
 var _hoisted_33 = {
-  "class": "flex items-center justify-between w-full"
+  "class": "flex-1 pl-8 text-right text-sm font-semibold"
+};
+var _hoisted_34 = {
+  "class": "flex w-full items-center justify-between"
 };
 
-var _hoisted_34 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "pl-8 font-semibold text-sm"
+var _hoisted_35 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "pl-8 text-sm font-semibold"
 }, "Email:", -1
 /* HOISTED */
 );
 
-var _hoisted_35 = {
-  "class": "pl-8 text-right font-semibold text-sm text-ourhouse-400 hover:text-ourhouse-500 hover:underline"
+var _hoisted_36 = {
+  "class": "pl-8 text-right text-sm font-semibold text-ourhouse-400 hover:text-ourhouse-500 hover:underline"
 };
-var _hoisted_36 = ["href"];
-var _hoisted_37 = {
-  "class": "flex items-center justify-between w-full"
+var _hoisted_37 = ["href"];
+var _hoisted_38 = {
+  "class": "flex w-full items-center justify-between"
 };
 
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
-  "class": "pl-8 font-semibold text-sm"
+var _hoisted_39 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
+  "class": "pl-8 text-sm font-semibold"
 }, "Phone:", -1
 /* HOISTED */
 );
 
-var _hoisted_39 = {
-  "class": "pl-8 text-right font-semibold text-sm"
-};
 var _hoisted_40 = {
-  "class": "w-1/4"
+  "class": "pl-8 text-right text-sm font-semibold"
 };
 var _hoisted_41 = {
-  "class": "flex h-max flex-col items-start justify-start p-2 text-left align-top lg:text-center"
+  "class": "w-1/4"
 };
 var _hoisted_42 = {
-  key: 0
+  "class": "flex h-max flex-col items-start justify-start p-2 text-left align-top lg:text-center"
 };
 var _hoisted_43 = {
+  key: 0
+};
+var _hoisted_44 = {
   key: 1,
   "class": "w-full"
 };
 
-var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
-  "class": "flex flex-col items-center justify-start"
+var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  "class": "flex h-max flex-col items-center justify-start"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("svg", {
   xmlns: "http://www.w3.org/2000/svg",
   "class": "mb-4 h-8 w-8 text-gray-300",
@@ -25638,11 +25649,11 @@ var _hoisted_44 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElement
   d: "M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
 })])]), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", {
   "class": "text-gray-300"
-}, "Add some Custom Attributes")], -1
+}, "Add your first custom attribute.")], -1
 /* HOISTED */
 );
 
-var _hoisted_45 = [_hoisted_44];
+var _hoisted_46 = [_hoisted_45];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_MortgageCalculator = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("MortgageCalculator");
 
@@ -25670,9 +25681,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* TEXT */
   ), _hoisted_14])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.row.land_area), 1
   /* TEXT */
-  ), _hoisted_17])])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_18, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)("$" + $options.formatCurrency($props.row.price)), 1
+  ), _hoisted_17])]), _hoisted_18])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_19, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_20, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)("$" + $options.formatCurrency($props.row.price)), 1
   /* TEXT */
-  ), _hoisted_20]), _hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageCalculator, {
+  ), _hoisted_21]), _hoisted_22, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_23, [_hoisted_24, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageCalculator, {
     "class": "flex-1 text-right",
     term: "monthly",
     listingAmount: $props.listing_amount,
@@ -25682,7 +25693,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     row: $props.row
   }, null, 8
   /* PROPS */
-  , ["listingAmount", "deposit", "loan_period", "interest_rate", "row"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_24, [_hoisted_25, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageCalculator, {
+  , ["listingAmount", "deposit", "loan_period", "interest_rate", "row"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_25, [_hoisted_26, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageCalculator, {
     "class": "flex-1 text-right",
     term: "fortnightly",
     listingAmount: $props.listing_amount,
@@ -25692,7 +25703,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     row: $props.row
   }, null, 8
   /* PROPS */
-  , ["listingAmount", "deposit", "loan_period", "interest_rate", "row"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_26, [_hoisted_27, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageCalculator, {
+  , ["listingAmount", "deposit", "loan_period", "interest_rate", "row"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_27, [_hoisted_28, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageCalculator, {
     "class": "flex-1 text-right",
     term: "weekly",
     listingAmount: $props.listing_amount,
@@ -25702,17 +25713,17 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     row: $props.row
   }, null, 8
   /* PROPS */
-  , ["listingAmount", "deposit", "loan_period", "interest_rate", "row"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_28, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [_hoisted_31, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.row.agent_name), 1
+  , ["listingAmount", "deposit", "loan_period", "interest_rate", "row"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_29, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_30, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_31, [_hoisted_32, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_33, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.row.agent_name), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_33, [_hoisted_34, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_35, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_34, [_hoisted_35, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_36, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
     href: 'mailto: ' + $props.row.agent_email + '?subject=Enquiry about - ' + $props.row.address
   }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.row.agent_email), 9
   /* TEXT, PROPS */
-  , _hoisted_36)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_37, [_hoisted_38, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.row.agent_phone), 1
+  , _hoisted_37)])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_38, [_hoisted_39, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_40, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.row.agent_phone), 1
   /* TEXT */
-  )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_40, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_41, [$props.custom_fields.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_42, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.custom_fields, function (cf) {
+  )])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("td", _hoisted_41, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_42, [$props.custom_fields.length > 0 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_43, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($props.custom_fields, function (cf) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
-      "class": "flex flex-col leading-6 text-right",
+      "class": "flex flex-col text-right leading-6",
       key: cf.id
     }, [cf.type == 'dropdown' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_CustomFieldDropdown, {
       key: 0,
@@ -25744,7 +25755,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     , ["modelValue", "onUpdate:modelValue", "cf"])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
   }), 128
   /* KEYED_FRAGMENT */
-  ))])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_43, _hoisted_45))])])]);
+  ))])) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_44, _hoisted_46))])])]);
 }
 
 /***/ }),
@@ -27952,13 +27963,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
           return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MortgageDetails, {
             "class": "absolute top-32 right-5 z-10 bg-ourhouse-100 rounded-md shadow-lg transition duration-200 ease-in-out",
             title: "title",
-            onChangedListingAmount: _ctx.methodListingAmount,
             onChangedDepositAmount: $options.methodDepositAmount,
             onChangedInterestRateAmount: $options.methodInterestRateAmount,
             onChangedLoanPeriodAmount: $options.methodLoanPeriod
           }, null, 8
           /* PROPS */
-          , ["onChangedListingAmount", "onChangedDepositAmount", "onChangedInterestRateAmount", "onChangedLoanPeriodAmount"])];
+          , ["onChangedDepositAmount", "onChangedInterestRateAmount", "onChangedLoanPeriodAmount"])];
         }),
         _: 1
         /* STABLE */
